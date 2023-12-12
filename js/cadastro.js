@@ -33,7 +33,7 @@ function createUser() {
     nome.value = ''
     password.value = ''
     avatar.value = ''
-    document.location.href = '/'
+    document.location.href = '/rettiwT/'
   }
 }
 
