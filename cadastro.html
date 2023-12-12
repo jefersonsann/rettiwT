@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>rettiwT</title>
+  </head>
+  <body>
+    <header>
+      <div class="header flex aling-center justify-between">
+          <h1 class="logo"><a href="/">rettiwT</a></h1>
+        <div class="usuario flex aling-center justify-center">
+          <div class="nome">Anonimo</div>
+          <div class="avatar"><img src="./assets/account_circle.svg" alt="User Anonimo"></div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <section>
+          <form action="#" id="formNewUser" class="form flex justify-center">
+            <h1>Cadastre-se</h1>
+            <div class="inputContent">
+              <label for="name">Nome</label>
+              <input type="text" name="name" id="name" placeholder="Seu Nome" required>
+            </div>
+            <div class="inputContent">
+              <label for="password">Senha</label>
+              <input type="password" name="password" id="password" placeholder="Sua Senha" required>
+            </div>
+            <div class="inputContent">
+              <label for="avatar">Avatar</label>
+              <input type="text" name="avatar" id="avatar" placeholder="Link da sua foto">
+            </div>
+            <button type="submit">Cadastrar</button>
+
+            <p>Ja tenho conta? <a href="/">Fazer Login!</a></p>
+
+            <div class="userExist"></div>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <footer><p><span class="dataAno">2030</sp>@ Todos os direiitos reservados</p></footer>
+
+    <script src="js/cadastro.js"></script>
+  </body>
+</html>

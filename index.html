@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>rettiwT</title>
+  </head>
+  <body>
+    <header>
+      <div class="header flex aling-center justify-between">
+          <h1 class="logo"><a href="/">rettiwT</a></h1>
+        <div class="usuario flex aling-center justify-center">
+          <div class="user">Login</div>
+          <div class="avatar"><img src="./assets/account_circle.svg" alt="User Anonimo"></div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <section>
+          <form action="#" id="formCreate" class="form">
+            <textarea class="input" name="message" id="message" cols="30" rows="5" placeholder="No que esta pensaando?"></textarea>
+            <button type="submit">Postar</button>
+          </form>
+        </section>
+        <section>
+          <ul class="listItens"></ul>
+        </section>
+      </div>
+      <div class="modal" data-modal="false">
+        <form class="form">
+          <h1>Login</h1>
+          <div class="inputContent">
+            <label for="name">Nome</label>
+            <input type="text" name="name" id="name" placeholder="Nome" required>
+          </div>
+          <div class="inputContent">
+            <label for="password">Senha</label>
+            <input type="password" name="password" id="password" placeholder="Senha" required>
+          </div>
+          <button type="submit">Login</button>
+          <p>Ainda não tem cadastro? <a href="/cadastro.html">Cadastre-se aqui!</a></p>
+          
+          <p class="erroLogin"></p>
+        </form>
+      </div>
+    </main>
+    <footer><p><div class="dataAno">2030</div>@Todos os direiitos reservados</p></footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>
