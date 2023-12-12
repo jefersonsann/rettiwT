@@ -9,7 +9,7 @@ const key = localStorage.getItem('key') || 0
 let users = JSON.parse(localStorage.getItem('users')) || []
 
 if (!localStorage.getItem('users')) {
-  document.location.href = '/cadastro.html'
+  document.location.href = '/rettiwT/cadastro.html'
 }
 
 let posts = users[key].posts
