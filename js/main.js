@@ -61,14 +61,42 @@ function createPost() {
       </div>
       <p>${message}</p>
       <div class="btns">
-        <button class="btnEdit">Editar</button>
-        <button class="btnDelete" onClick="handleDelete(${id})">Excluir</button>
+        <button onClick="handleEdit(${id})">Editar</button>
+        <button onClick="handleDelete(${id})">Excluir</button>
       </div>
       `
     listItens.appendChild(li)
   })
 }
 createPost()
+
+function handleEdit(id) {
+  const modal = document.createElement('div')
+  modal.classList = 'modal'
+  modal.setAttribute('data-modal', true)
+  modal.innerHTML = `
+    <form class="form formEdit">
+      <h1>Editar</h1>
+      <div class="inputContent">
+        <textarea class="input" name="newMessage" id="newMessage" cols="30" rows="5" placeholder="Novo pensamento"></textarea>
+      </div>
+      <button type="submit">Salvar</button>
+    </form>
+  `
+  document.body.appendChild(modal)
+
+  const newMessage = document.querySelector('#newMessage')
+  newMessage.value = posts[id].message
+  const formEdit = document.querySelector('.formEdit')
+
+  formEdit.addEventListener('submit', () => {
+    console.log(newMessage.value)
+    posts[id].message = newMessage.value
+    localStorage.setItem('users', JSON.stringify(users))
+    listItens.innerHTML = ''
+    createPost()
+  })
+}
 
 function handleDelete(id) {
   posts.splice(id, 1)
