@@ -108,7 +108,6 @@ function handleDelete(id) {
 function handleLogin(e) {
   const nome = document.getElementById('name').value.toLowerCase()
   const password = document.getElementById('password').value
-  e.preventDefault()
 
   const loginUser = users.some((item) => item.nome === nome)
   const loginPassword = users.some((item) => item.password === password)
@@ -117,6 +116,7 @@ function handleLogin(e) {
     autoLogin(nome)
     modal.setAttribute('data-modal', false)
   } else {
+    e.preventDefault()
     document.querySelector('.erroLogin').textContent =
       'Usuario ou senha incorreto!'
   }
