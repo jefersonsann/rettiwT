@@ -21,7 +21,9 @@ function autoLogin(nome) {
       user.innerHTML = `
       <div class="user">${item.nome}</div>
       <div class="avatar">
-      <img src="${item.avatar}" alt="${item.nome}" />
+      <img src="${item.avatar || './assets/account_circle.svg'}" alt="${
+        item.nome
+      }" />
       </div>    
       `
       localStorage.setItem('key', key)
