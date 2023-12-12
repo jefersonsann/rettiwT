@@ -78,7 +78,7 @@ function handleEdit(id) {
     <form class="form formEdit">
       <h1>Editar</h1>
       <div class="inputContent">
-        <textarea class="input" name="newMessage" id="newMessage" cols="30" rows="5" placeholder="Novo pensamento"></textarea>
+        <textarea class="input" name="newMessage" id="newMessage" cols="30" rows="5" placeholder="Novo pensamento" autofocus></textarea>
       </div>
       <button type="submit">Salvar</button>
     </form>
